@@ -1,0 +1,66 @@
+.img{
+    width: 30%;
+
+}
+
+p{
+    text-align: center;
+}
+
+.formulario{
+    align-items: center;
+    background-color: rgba(7, 1, 12, 0.8);
+    display:grid;
+    text-align: center;
+    height: 250px;
+    margin: auto;
+    margin-top: 150px;
+    width: 25%;
+    border: 3px solid black;
+    border-radius: 5px;
+    padding: 80px;
+      
+   
+}
+
+label{
+    color: whitesmoke
+}
+    
+input[type=text], select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      
+button{
+        margin-top: 12px;
+        border-radius: 5px;
+        padding: 5px;
+        border: 2px solid ghostwhite;
+        background-color: rgba(7, 1, 12, 0.6);
+        color: whitesmoke
+      }
+button:hover {
+        background-color: #717c80;
+      }
+      
+      
+
+.footer{
+    background-color: black;
+    height: 50px;
+    vertical-align: middle;
+}
+
+
+
+h6{
+    color: azure;
+    text-align: center;
+    
+}
