@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block titulo %} Quienes Somos {% endblock titulo %}
+{% static "css/style.css" %}
+{% block contenido %}
+    <body>
+        <audio src="{% static 'audio/Futuristic_Weapons_Sound_Effects_-_space_laser.mp3' %}" autoplay></audio>
+        <video src="{% static 'video/El texto del párrafo (Video para dispositivos móviles).mp4' %}" autoplay controls></video>
+        <section>
+            <div>
+            <a href="{% static 'img/apple-256261_1280.jpg' %}" target="_blank" rel="noopener noreferrer"><img src="/asset/img/apple-256261_1280.jpg" alt="manzana"></a>
+            <p>Manzana</p>
+            </div>
+            <div>
+            <img src="{% static 'img/humming-bird-1935665_1280.png'%}" alt="pajaro">
+            <p>Pajaro</p>
+            </div>
+        </section>
+    </body>
+{% endblock contenido %}
