@@ -8,11 +8,11 @@
     <h1>Regístrate</h1>
     <div><b>Para usar la plataforma debes registrarte</b> </div>
 </div>
-
-<form method="post" enctype="multipart/form-data">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="Registrarse">
-</form>
-
+<div class="contenedor_formulario"  >
+       <form method="post" enctype="multipart/form-data" class="text-center"  >
+         {% csrf_token %}
+         {{ form.as_p }}
+            <input type="submit" value="Registrarse" class="form-control">
+       </form>
+</div>
 {% endblock contenido %}

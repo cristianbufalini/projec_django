@@ -2,14 +2,19 @@
 {% load static %}
 {% block titulo %}Login{% endblock titulo %}
 {% block contenido %}
+
+<h1>Iniciar sesion</h1>
+
+<div class="contenedor_formulario ">
     <form method="POST">{% csrf_token %}
         {% if messages %}
             {% for message in messages %}
                 <div class="alert alert-danger">{{ message }}</div>
             {% endfor %}
         {% endif %}
-        <input type="text" name="username" placeholder="Usuario">
-        <input type="password" name="password" placeholder="Contraseña">
-        <button type="submit">Login</button>
+        <input type="text" name="username" placeholder="Usuario" id="inputLogin">
+        <input type="password" name="password" placeholder="Contraseña" id="inputLogin">
+        <button type="submit" style=" margin-left: 50%; padding: 5px 20px;">Login</button>
     </form>
+</div>
 {% endblock contenido %}
