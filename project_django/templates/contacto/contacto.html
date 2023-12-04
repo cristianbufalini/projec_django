@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load static %} 
+
+{% block contenido %}
+
+<h1>CONTACTANOS!</h1>
+
+<form method='post'>
+    {% csrf_token %}
+    {{ form }}
+    <br>
+    <button type='submit'>ENVIAR</button>
+</form>
+
+{{ mensaje }}
+
+{% endblock contenido %}

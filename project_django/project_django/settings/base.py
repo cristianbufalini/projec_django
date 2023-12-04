@@ -25,9 +25,7 @@ SECRET_KEY = 'django-insecure-ignms*blp-$(&$l95jo-mv!ppx^a&y^1lwir5084%58tn2kte(
 
 AUTH_USER_MODEL = 'usuarios.Usuario'
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
 
-ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -42,6 +40,7 @@ INSTALLED_APPS = [
     'home',
     'usuarios',
     'apps.noticias',
+    'apps.contacto',
 ]
 
 MIDDLEWARE = [
@@ -74,16 +73,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'project_django.wsgi.application'
 
-
-# Database
-# https://docs.djangoproject.com/en/4.2/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
 
 
 # Password validation

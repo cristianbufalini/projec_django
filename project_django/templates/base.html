@@ -10,11 +10,8 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="{% static 'css/form.css' %}">
     <link rel="stylesheet" href="{% static 'css/footer.css' %}">
- 
 </head>
 <body>
-
-    
         <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark"> 
             <div class="container-fluid">
               <a class="navbar-brand" href="#">Cotton Academy</a>
@@ -32,7 +29,7 @@
                   </li>
                   
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Contacto</a>
+                    <a class="nav-link" href="{% url 'contacto:contacto' %}">Contacto</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="{% url 'quienes_somos' %}">Quienes somos</a>
@@ -44,7 +41,6 @@
                     <li class="nav-item">
                       <a class="nav-link active" aria-current="page" href="{% url 'login' %}">Login</a> </li>
                       <a class="nav-link active" aria-current="page" href="{% url 'registro' %}">Registro</a>
-                   
                   {% endif %}
                 </ul>
                 <form class="d-flex" role="search">
