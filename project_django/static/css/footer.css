@@ -1,7 +1,19 @@
 .footer{
-    background-color: black;
+    background-color: rgb(192, 6, 6);
     height: 50px;
     position: relative;
     margin-top: 370px;
+    
   
+}
+
+.color{
+background-color: rgba(25, 25, 231, 0.381);
+color: whitesmoke;
+
+}
+
+.color:focus{
+    border-color: aliceblue;
+    border-bottom: coral;
 }

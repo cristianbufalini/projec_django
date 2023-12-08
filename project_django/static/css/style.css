@@ -32,11 +32,11 @@ button{
         border-radius: 5px;
         padding: 5px;
         border: 2px solid ghostwhite;
-        background-color: rgba(7, 1, 12, 0.6);
+        background-color: rgba(12, 6, 1, 0.6);
         color: whitesmoke
 }
 button:hover {
-        background-color: #717c80;
+        background-color: #807a71;
       }
 
 h6{

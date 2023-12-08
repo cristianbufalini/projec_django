@@ -4,17 +4,18 @@
 {% block contenido %}
 
 <h1>Iniciar sesion</h1>
-
-<div class="contenedor_formulario ">
+<div class="iniciar_sesion">
+<div class="contenedor_formulario">
     <form method="POST">{% csrf_token %}
         {% if messages %}
             {% for message in messages %}
                 <div class="alert alert-danger">{{ message }}</div>
             {% endfor %}
         {% endif %}
-        <input type="text" name="username" placeholder="Usuario" id="inputLogin">
-        <input type="password" name="password" placeholder="Contraseña" id="inputLogin">
-        <button type="submit" style=" margin-left: 50%; padding: 5px 20px;">Login</button>
+        <input type="text" name="username" placeholder="Usuario" id="inputLogin"> <br>
+        <input type="password" name="password" placeholder="Contraseña" id="inputLogin"><br>
+        <button type="submit" class="btn  btn-lg px-4 gap-3 bg-primary-subtle" data-bs-theme="dark">Login</button>
     </form>
+</div>
 </div>
 {% endblock contenido %}

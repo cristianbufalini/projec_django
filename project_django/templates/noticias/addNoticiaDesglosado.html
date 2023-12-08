@@ -8,7 +8,7 @@
     <form action="" method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         
-        <p>
+        <p class="color">
             <label for="{{ form.titulo.id_for_label }}">Titulo:</label>
             {{ form.titulo }}
         </p>

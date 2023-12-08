@@ -1,13 +1,21 @@
 .contenedor_formulario {
-  border: thick double #080c0e;
+  border-image: url('logo.png') 30 round;
   width: 50%;
+  height: 100%;
   display: flex;
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
   padding: 20px;
+  background-color: aliceblue;
 }
 
 .form-control{
     color: black
+}
+
+.iniciar_sesion{
+  background-color: rgba(1, 41, 41, 0.393);
+  height: 80vh;
+  padding: 5%;
 }

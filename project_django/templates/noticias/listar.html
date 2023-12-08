@@ -4,43 +4,72 @@
 {% block titulo %}NOTICIAS{% endblock titulo %}
 
 {% block contenido %}
-    <h2>Aquí están mis noticias</h2>
-    <div class="submenu">
-        <div class="dropdown">
-            <button class="dropdown-btn">Categorías</button>
-            <div class="dropdown-content">
-            <a href="{% url 'noticias:listar' %}">Todas las noticias</a>
+<ul class="nav  justify-content-end         ">
+<li class="nav-items" style="font-style: italic; font-size: x-large; "></li><h2>Noticias</h2>
+<div class="submenu conteiner " style="margin-left: 50%;">
+    <div class="dropdown" style="margin-right: 15px;"           >
+       <li class="nav-items"  ></li> <button class="btn  dropdown-toggle bg-primary-subtle  "data-bs-theme="dark"type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Categorías</button>
+        <ul class="dropdown-menu">
+        <li><a href="{% url 'noticias:listar' %}" style="list-style: none; text-decoration: none; color:inherit;padding: 7px;  ">Todas las noticias</a><li><hr>
             {% for cat in categorias %}
-            <a href="?categoria={{ cat.pk }}">{{ cat.nombre }}</a>
-            {% endfor %}
-            </div>
+        <li><a href="?categoria={{ cat.pk }}"style="list-style: none; text-decoration: none; color:inherit;padding: 7px;  ">{{ cat.nombre }}</a></li>
+        {% endfor %}
+    </ul>
+       
         </div>
-        <div class="dropdown">
-            <button class="dropdown-btn">Ordenar</button>
-            <div class="dropdown-content">
-            <a href="?antiguedad_asc=1">Más antiguas primero</a>
-            <a href="?antiguedad_desc=1">Más recientes primero</a>
-            <a href="?orden_asc=1">Orden alfabético ascendente</a>
-            <a href="?orden_desc=1">Orden alfabético descendente</a>
-            </div>
-        </div>
-        <a href="?antiguedad_asc=1">
-            <button class="arrow-btn">&#11014;</button>
-          </a>
-          <a href="?antiguedad_desc=1">
-            <button class="arrow-btn">&#11015;</button>
-          </a>
+        
     </div>
-    <br>
+      
+    
+    <div class="dropdown "  style="margin-right: 15px;"              >
+        <li class="nav-items" style=" "></li><button class="btn  dropdown-toggle bg-primary-subtle  "data-bs-theme="dark" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Ordenar</button>
+       
+            <ul class="dropdown-menu">
+        <li><a href="?antiguedad_asc=1" style="list-style: none; text-decoration: none; color:inherit;padding: 7px;  ">Más antiguas primero</a></li><hr>
+        <li><a href="?antiguedad_desc=1" style="list-style: none; text-decoration: none; color:inherit;padding: 7px; ">Más recientes primero</a></li><hr>
+        <li><a href="?orden_asc=1" style="list-style: none; text-decoration: none; color:inherit; padding: 7px;">Orden alfabético ascendente</a></li><hr>
+        <li><a href="?orden_desc=1" style="list-style: none; text-decoration: none; color:inherit; padding: 7px; ">Orden alfabético descendente</a></li>
+            </ul>
+    </div>
+    </div>
+    <li class="nav-items" style=" "></li><a href="?antiguedad_asc=1">
+        <button class="arrow-btn">&#11014;</button>
+      </a>
+      <li class="nav-items" style=" "></li><a href="?antiguedad_desc=1">
+        <button class="arrow-btn">&#11015;</button>
+      </a>
+</div>
+</ul>
+
+<br>
+<div class="bg-success-subtle" >
+<div class="container text-center bg-primary-subtle" style="padding: 5%;">
     {% for noti in noticias %}
-        {% if noti.imagen %}
-            <img src="{{ noti.imagen.url }}" width="50">
-        {% endif %}
-            <p><a href="{% url 'noticias:detalle' noti.pk %}">TITULO: {{ noti.titulo }}</a></p>
-            <p>FECHA: {{ noti.fecha_de_publicacion }}</p>
-            <p>CATEGORIA: {{ noti.categoria_noticia }}</p>
-            <p>CONTENIDO: {{ noti.contenido }}</p>
-    {% endfor %}
+        <div class="card mb-3" style="max-width: 100%; align-content: center;">
+            <div class="row g-0 bg-danger-subtle">
+                <div class="col-md-4">
+                    {% if noti.imagen %}
+                        <img src="{{ noti.imagen.url }}" class="img-fluid rounded-start" style="width:300px;">
+                    {% endif %}
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <p><a href="{% url 'noticias:detalle' noti.pk %}" style="text-decoration: none; color: inherit; font-size: x-large;">TITULO: {{ noti.titulo }}</a></p>
+                        <p class="card-text">FECHA: {{ noti.fecha_de_publicacion }}</p>
+                        <p class="card-text">CATEGORIA: {{ noti.categoria_noticia }}</p>
+                        <p class="card-text">{{ noti.contenido }}</p>
+                    </div>
+                </div>
+            </div>
+               </div>
+                    {% endfor %}
+                </div>
+
+
+   
+</div>
 
 {% endblock contenido %}
 
